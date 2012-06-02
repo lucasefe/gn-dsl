@@ -2,19 +2,17 @@
 
 ## Description
 
-gn-dsl is a simple dsl for (gn)[http://lucasefe.github.com/gn]
+gn-dsl is a simple dsl for [gn](http://lucasefe.github.com/gn)
 
 The main idea is to simplify the simplest concepts while still alowwing to do
 it the original way. 
 
-## Usage
-
-Before
+## Without DSL
 
     module Plan
 
       class App
-        
+
         def destination
           "app.rb"
         end
@@ -23,7 +21,7 @@ Before
 
     end
 
-After
+## With DSL
 
 Define your plan like this:
 
