@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gn-dsl by lucasefe</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/lucasefe/gn-dsl">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/lucasefe/gn-dsl/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/lucasefe/gn-dsl/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Gn-dsl</h1>
+          <p>sugar for gn</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/lucasefe">lucasefe</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>gn-dsl</h1>
+
+<h2>Description</h2>
+
+<p>gn-dsl is a simple dsl for <a href="http://lucasefe.github.com/gn">gn</a></p>
+
+<p>The main idea is to simplify the simplest concepts while still alowwing to do
+it the original way. </p>
+
+<h2>Without DSL</h2>
+
+<pre><code>module Plan
+
+  class App
+
+    def destination
+      "app.rb"
+    end
+
+  end
+
+end
+</code></pre>
+
+<h2>With DSL</h2>
+
+<p>Define your plan like this:</p>
+
+<pre><code>require 'gn/dsl'
+
+module Plan
+
+  extent Gn::DSL
+
+  template "App", "app.rb"
+
+end
+</code></pre>
+
+<p>I think this is useful only on some cases. For instance, when you have many
+simple templates. </p>
+
+<p>Ah, sorry, you can also do this:</p>
+
+<pre><code>require 'gn/dsl'
+
+module Plan
+
+  extent Gn::DSL
+
+  template "App", "app.rb" do
+    def name
+      "My App Name"
+    end
+  end
+
+end
+</code></pre>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
