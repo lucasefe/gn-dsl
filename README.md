@@ -37,4 +37,22 @@ Define your plan like this:
 
     end
 
-Useful for some cases... so use as much as you want. 
+I think this is useful only on some cases. For instance, when you have many
+simple templates. 
+
+Ah, sorry, you can also do this:
+
+
+    require 'gn/dsl'
+
+    module Plan
+
+      extent Gn::DSL
+
+      template "App", "app.rb" do
+        def name
+          "My App Name"
+        end
+      end
+
+    end
