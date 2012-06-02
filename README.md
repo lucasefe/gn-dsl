@@ -1,5 +1,9 @@
 # gn-dsl
 
+# Already included on GN. No need to install this gem. Just install gn and
+require the file (as 'gn/dsl').
+
+
 ## Description
 
 gn-dsl is a simple dsl for [gn](http://lucasefe.github.com/gn)
